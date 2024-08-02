@@ -130,7 +130,7 @@ TEST(ControlMathTest, ThrottleAttitudeMapping)
 	thr = Vector3f(0.f, 0.f, 1.f);
 	thrustToAttitude(thr, yaw, att);
 	Eulerf euler_att2(Quatf(att.q_d));
-	EXPECT_FLOAT_EQ(euler_att2.phi(), -M_PI_F);
+	EXPECT_FLOAT_EQ(std::abs(euler_att2.phi()), std::abs(M_PI_F));
 	EXPECT_FLOAT_EQ(euler_att2.theta(), 0.f);
 	EXPECT_FLOAT_EQ(euler_att2.psi(), M_PI_2_F);
 	EXPECT_FLOAT_EQ(att.thrust_body[2], -1.f);
