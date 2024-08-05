@@ -169,7 +169,7 @@
       https://fuel.gazebosim.org/1.0/OpenRobotics/models/Urban Starting Area
       </uri>
       <name>staging_area</name>
-      <pose>0 0 -0.0050000000000000001 0 0 0</pose>
+      <pose>5.0 -30.0 -15.0 0 0 0</pose>
     </include>
 
     <light name='sunUTC' type='directional'>
